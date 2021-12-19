@@ -29,7 +29,7 @@ Home page is the main page of Playshop. This page is accessible to all. Guest, c
 
 # (4/18) View Game Page (as Guest or Customer)
 ![](pic/5viewgame(customer).jpg)
-View Games page will show you all games that are categorized as the one you clicked on Home page. In this case, we are seeing games which are categorized as Corsair. Here, you can make use of the search function by typing a keyword of the name or the price then click the search button. Other than that, this page also implements Laravel’s pagination by dividing each page up to maximum of 8 games per page. This page can be accessed by all users, but guest and customer can only click the name of the game to go to that game’s Game Detail page.
+View Games page will show you all games that are categorized as the one you clicked on Home page. In this case, we are seeing games which are categorized as Corsair. Here, you can make use of the search function by typing a keyword of the name or the price then click the search button. Other than that, this page also implements Laravel’s pagination by dividing each page up to maximum of 5 games per page. This page can be accessed by all users, but guest and customer can only click the name of the game to go to that game’s Game Detail page.
 
 # (5/18) View Game Page (as Admin)
 ![](pic/6viewgame(admin).jpg)
