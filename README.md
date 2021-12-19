@@ -37,7 +37,7 @@ View Games page will show you all games that are categorized as the one you clic
 This is how the View Game page looks like if you were a admin. Admins can delete a game by clicking on the delete button on the specific game that they want to delete, doing this will bring up a prompt confirming if you really want to do this. Admins can also update a specific game by clicking on the update game button which will redirect them to the Update Game page.
 
 # (6/18) Update Game Page
-![](pic/7viewgame(admin).jpg)
+![](pic/7updategame.jpg)
 Update Game page is only accessible to admin. This page will show all of the data from the chosen game and the admin can edit them by picking a new genre, new name, price, description, or upload a new image for this game. The admin input will be validated first before processed, most of them are usual validation such as fields cannot be empty, except the image field (which can be ignored), but one of the validations is that if nothing was changed and the admin pressed the update game button, it will show an error that nothing was changed.
 
 # (7/18) Game Detail Page (as Guest or Customer)
