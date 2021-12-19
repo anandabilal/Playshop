@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    background-color: #2e6db4;
+    padding-bottom: 100px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* NAVBAR */
+nav {
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+nav>a {
+    line-height: 50px;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: black;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    float: right;
+    margin-right: 100px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a, nav ul li p {
+    display: block;
+    padding: 0 10px;
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li .role-name {
+    color: black;
+}
+
+nav>ul>li>a, nav>ul>li>p {
+    line-height: 50px;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 50px;
+    display: none;
+    background: white;
+    border: 1px solid #bebebe;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+    line-height: 35px;
+}
+
+nav ul ul li a {
+    color: black;
+}
+
+nav ul li:hover {
+    background: #bcbcbc;
+}
+
+nav ul li p:hover {
+    background: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    display: block;
+    line-height: 35px;
+    width: 100%;
+}
+
+nav button a {
+    text-align: left;
+    font-size: 16px;
+}
+
+/* CONTENT */
+/* Login, Register, Add Game, Change Password, Update Game, Game Detail, Transaction History Detail */
+.loginContainer, .registerContainer, .addGameContainer, .changePasswordContainer, .updateGameContainer, .updateGenreContainer, .gameDetailContainer, .myCartContainer {
+    background: #bcbcbc;
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 50px;
+}
+
+.tranHistDetContainer {
+    margin: auto;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 50px;
+    width: 85%;
+}
+
+.loginContainer, .registerContainer, .addGameContainer, .changePasswordContainer {
+    width: 800px;
+}
+
+.updateGameContainer, .updateGenreContainer, .gameDetailContainer, .myCartContainer {
+    width: 900px;
+}
+
+.loginHeader, .registerHeader, .addGameHeader, .changePasswordHeader, .updateGameHeader, .updateGenreHeader, .gameDetailHeader, .myCartHeader {
+    padding: 15px;
+    border-bottom: 1px solid grey;
+}
+
+.tranHistDetHeader {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.loginHeader p, .registerHeader p, .addGameHeader p, .changePasswordHeader p, .updateGameHeader p, .updateGenreHeader p, .gameDetailHeader p, .myCartHeader p {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.login, .register, .addGame, .changePassword, .updateGame, .updateGenre, .gameDetail, .myCart, .tranHistDet {
+    padding: 25px;
+    text-align: center;
+}
+
+.myCart:not(:last-child) {
+    border-bottom: 1px solid grey;
+}
+
+.login table, .register table, .addGame table, .changePassword table, .updateGame table, .updateGenre table, .gameDetail table, .myCart table, .tranHistDet table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.login td, .register td, .addGame td, .changePassword td, .updateGame td, .updateGenre td, .gameDetail td, .myCart td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.tranHistDet table {
+    width: 100%;
+}
+
+.tranHistDet th {
+    border-top: 5px solid black;
+}
+
+.tranHistDet th, .tranHistDet td {
+    vertical-align: top;
+    text-align: left;
+    padding: 15px 15px;
+    border-bottom: 1px solid black;
+    width: 25%;
+}
+
+.tranHistDet tr:last-child {
+    border-bottom: 5px solid black;
+}
+
+.tranHistDet .grandTotal {
+    text-align: left;
+    font-weight: bold;
+}
+
+.gameDetail tr:nth-child(3) td {
+    padding-bottom: 20px;
+}
+
+.login #email_address, .login #password, .login #remember_me, .login button, .login span, .register #username, .register #email_address, .register #password, .register #confirm_password, .register #address, .register #gender_male, .register #birth_date, .register button, .register span, .addGame #genre_id, .addGame #name, .addGame #price, .addGame #description, .addGame #image, .addGame button, .addGame span, .changePassword #current_password, .changePassword #new_password, .changePassword #new_confirm_password, .changePassword span, .changePassword button, .updateGame #genre_id, .updateGame #name, .updateGame #price, .updateGame #description, .updateGame #image, .updateGame button, .updateGame span, .updateGenre #name, .updateGenre #image, .updateGenre button, .updateGenre span, .gameDetail #quantity, .gameDetail button, .gameDetail span, .myCart p, .myCart #quantity, .myCart button, .myCart span {
+    margin-left: 20px;
+}
+
+.login #email_address, .login #password, .register #username, .register #email_address, .register #password, .register #confirm_password, .register #address, .register #birth_date, .addGame select, .addGame #name, .addGame #price, .addGame #description, .changePassword #current_password, .changePassword #new_password, .changePassword #new_confirm_password, .updateGame select, .updateGame #name, .updateGame #price, .updateGame #description, .updateGenre #name, .gameDetail #quantity, .myCart #quantity {
+    width: 400px;
+    height: 35px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.register #address, .addGame #description, .updateGame #description {
+    resize: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 85px;
+    vertical-align: middle;
+    font-family: inherit;
+}
+
+.login span, .register span, .addGame span, .changePassword span, .updateGame span, .updateGenre span, .gameDetail span, .myCart span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.login .error, .register .error, .addGame .error, .changePassword .error, .updateGame .error, .updateGenre .error, .gameDetail .error, .myCart .error {
+    color: red;
+}
+
+.login .success, .addGame .success, .changePassword .success, .gameDetail .success, .myCart .success {
+    color: green;
+}
+
+.login button, .register button, .addGame button, .changePassword button, .updateGame button, .updateGenre button, .gameDetail button, .myCart button {
+    background-color: #2e6db4;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+}
+
+.login button:hover, .register button:hover, .addGame button:hover, .changePassword button:hover, .updateGame button:hover, .updateGenre button:hover, .gameDetail button:hover, .myCart button:hover {
+    background-color: #5781b1;
+}
+
+.updateGame, .updateGenre, .gameDetail, .myCart {
+    display: flex;
+    justify-content: center;
+}
+
+.updateGame .boxImage, .updateGenre .boxImage, .gameDetail .boxImage, .myCart .boxImage {
+    margin-right: 20px;
+}
+
+.updateGame img, .updateGenre img, .gameDetail img, .myCart img, .tranHistDet img {
+    border: 1px solid grey;
+}
+
+/* Home, View Game, Manage Genre, Transaction History */
+.homeContainer, .viewGameContainer, .manageGenreContainer, .tranHistContainer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.homeContainer p, .tranHistContainer p {
+    margin-top: 5px;
+}
+
+.homeContainer h2 {
+    margin-top: 30px;
+}
+
+.homeContainer .home, .viewGameContainer .viewGame, .manageGenreContainer .manageGenre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.home .boxOuter, .viewGame .boxOuter, .manageGenre .boxOuter {
+    background: #bcbcbc;
+    padding: 7px;
+}
+
+.home .boxOuter, .manageGenre .boxOuter {
+    margin: 20px 20px;
+}
+
+.viewGame .boxOuter {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+.home .boxInner, .viewGame .boxInner, .manageGenre .boxInner {
+    display: grid;
+    border: 1px solid grey;
+    max-width: min-content;
+}
+
+.home .boxInner a, .viewGame .boxInner a, .viewGame .boxInner p, .manageGenre .boxInner p {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.home .boxInner a, .viewGame .boxInner a, .manageGenre .boxInner a, .manageGenre .boxInner p {
+    padding: 10px 20px;
+}
+
+.home .boxInner a, .viewGame .boxInner a, .manageGenre .boxInner a {
+    color: #3535ff;
+    text-decoration: none;
+}
+
+.home .boxInner a:hover, .viewGame .boxInner a:hover, .manageGenre .boxInner a:hover {
+    color: #6565f8;
+}
+
+.viewGameContainer h1 {
+    margin: auto;
+    width: 90%;
+    background: #bcbcbc;
+}
+
+.viewGame .boxInner p {
+    padding-bottom: 10px;
+}
+
+.viewGame .boxButton, .manageGenre .boxButton {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.viewGame button, .manageGenre button {
+    background-color: #2e6db4;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+}
+
+.viewGame button:hover, .viewGameSearchBar button:hover, .manageGenre button:hover {
+    background-color: #5781b1;
+}
+
+.viewGame .boxButton .updateButton, .manageGenre .boxButton .updateButton {
+    background-color: #2e6db4;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.viewGame .boxButton .updateButton:hover, .manageGenre .boxButton .updateButton:hover {
+    background-color: #5781b1;
+}
+
+.viewGame .boxButton a:hover, .manageGenre .boxButton a:hover {
+    color: white;
+}
+
+.viewGameBar {
+    display: flex;
+    margin: 20px 0;
+}
+
+.viewGamePagination {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 5%;
+}
+
+.viewGamePagination a, .viewGamePagination p {
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.viewGamePagination a {
+    color: white;
+}
+
+.viewGamePagination a:hover {
+    color: #bcbcbc;
+}
+
+.viewGameSearchBar {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.viewGameSearchBar button {
+    background-color: #2e6db4;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+}
+
+.viewGameSearchBar #search {
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.viewGameSearchBar span, .manageGenreHeader span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.viewGameSearchBar .success, .manageGenreHeader .success {
+    color: white;
+}
+
+.manageGenreMessage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tranHist {
+    margin: 50px 0;
+}
+
+.tranHistContent {
+    margin-bottom: 40px;
+}
+
+.tranHistContent .detailButton {
+    background-color: white;
+    padding: 8px 40px;
+    border-radius: 3px;
+    color: #3535ff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.tranHistContent .detailButton:hover {
+    color: #4b4bee;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 -5px 5px rgba(0,0,0,0.1);
+}
