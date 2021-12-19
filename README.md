@@ -4,7 +4,7 @@ A web application to buy, sell, and manage games in a game store. There are thre
 # Startup Guide
 1. Install XAMPP, then start Apache and MySQL module (make sure these two modules are active, otherwise the application can't connect to the database and won't start).
 2. Go to http://localhost/phpmyadmin/.
-3. Create a database named 'keypediadb'.
+3. Create a database named 'playshopdb'.
 4. Open the project's directory in a terminal and run the command: 
     - *php artisan migrate:refresh* (to migrate tables to the database)
     - *php artisan db:seed* (to fill those table with values)
