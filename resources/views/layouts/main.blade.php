@@ -1,9 +1,3 @@
-{{-- NIM         : 2301883725 --}}
-{{-- Nama        : Ananda Bilal --}}
-{{-- Jurusan     : Teknik Informatika --}}
-{{-- Semester    : 5 (Odd 2021/2022) --}}
-{{-- Kelas       : COMP6681001 - Web Programming BU01 --}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
