@@ -5,10 +5,16 @@ A web application to buy, sell, and manage games in a game store. There are thre
 1. Install XAMPP, then start Apache and MySQL module (make sure these two modules are active, otherwise the application can't connect to the database and won't start).
 2. Go to http://localhost/phpmyadmin/.
 3. Create a database named 'playshopdb'.
-4. Open the project's directory in a terminal and run the command: 
-    - *php artisan migrate:fresh --seed* (to drop all tables then migrate new tables to the database, and seed the database from the seeder files)
+4. Open the project's directory in a terminal, and run these commands:
+    - *cp .env.example .env*
+    - *php artisan key:generate*
+5. Change some of the value in .env:
+    - *APP_NAME=Laravel* to *APP_NAME=Playshop*
+    - *DB_DATABASE=laravel* to *DB_DATABASE=playshopdb*
+7. Open the project's directory in a terminal and run the command: 
+    - *php artisan migrate:fresh --seed*
     - *php artisan serve*
-5. Open the link given after the last command to open the web application.
+8. Open the link given after the last command to open the web application.
 
 # Class Diagram for Playshop's Database
 ![](pic/1classdiagram.jpg)
