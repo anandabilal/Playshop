@@ -26,6 +26,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Web Programming LK01 - Anggota Kelompok:
+// 2301859266 - Leonard Richie Tjandra
+// 2301857121 - Napoleon Chandra
+// 2301860343 - Fransiskus Erik Jonathan Purwanto
+// 2301883725 - Ananda Bilal
+// 2301883504 - James Lewi Duykers
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
